@@ -1,0 +1,22 @@
+SELECT location, AVG(employees)
+FROM startups
+GROUP BY location
+HAVING AVG(employees) > 500;
+
+GROUP BY a calculation done on a column
+=======================================
+
+SELECT ROUND(imdb_rating),
+  COUNT(name)
+FROM movies
+GROUP BY ROUND(imdb_rating)
+GROUP BY ROUND(imdb_rating) 
+
+___column references___ 
+========================
+
+SELECT ROUND(imdb_rating),
+  COUNT(name)
+FROM movies
+GROUP BY 1
+GROUP BY 1;
